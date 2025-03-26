@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { userLogin } from '../Store/userSlice'
+import { userLogin } from '../Store/UserSlice'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
