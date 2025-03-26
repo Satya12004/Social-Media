@@ -12,7 +12,7 @@ const Forgate = () => {
    
     }
     try {
-      let ref= await axios.post('http://localhost:8090/user/forget',obj)
+      let ref= await axios.post('https://social-media-66lv.onrender.com/user/forget',obj)
       let data =ref.data
     
       toast.success(data.msg,{position:'top-center'})

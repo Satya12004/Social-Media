@@ -6,7 +6,7 @@ import Home from './Pages/Home'
 import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUserBydata}  from './Store/userSlice'
+import { fetchUserBydata } from './Store/UserSlice'
 import Forgate from './Pages/Forgate'
 import {ToastContainer} from 'react-toastify'
 import Profile from './Pages/Profile'
@@ -36,6 +36,8 @@ let selector=useSelector((state)=>state.user)
   console.log(token)
   
   let dispatch=useDispatch()
+  console.log(dispatch);
+  
    useEffect(()=>{
   if(token){
   dispatch(fetchUserBydata(token))

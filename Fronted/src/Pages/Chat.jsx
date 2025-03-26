@@ -17,7 +17,7 @@ const Chat = () => {
   const [allMessages, setallMessages] = useState([]);
 
   const getChat = async () => {
-    let res = await axios.get(`http://localhost:8090/Chat/getChat/${friendId}`, {
+    let res = await axios.get(`https://social-media-66lv.onrender.com/Chat/getChat/${friendId}`, {
       headers: {
         'Authorization': userSlice.token
       }
@@ -41,7 +41,7 @@ const Chat = () => {
         text :messageref.current.value
       }
       socket.emit('sendMessage',{...obj,userId:userSlice.user._id, friendId})
-      let res = await axios.post(`http://localhost:8090/chat/create/${friendId}`,obj,{
+      let res = await axios.post(`https://social-media-66lv.onrender.com/chat/create/${friendId}`,obj,{
         headers:{
           'Authorization':userSlice.token
         }

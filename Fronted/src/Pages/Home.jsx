@@ -14,7 +14,7 @@ const Home = () => {
    console.log(userSlice)
   
   let getAllPost=async()=>{
-    let res=await axios.get('http://localhost:8090/post/alluserPosts',{
+    let res=await axios.get('https://social-media-66lv.onrender.com/post/alluserPosts',{
       headers:{
         'Authorization':userSlice.token
       }

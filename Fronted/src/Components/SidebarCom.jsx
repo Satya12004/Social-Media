@@ -63,7 +63,7 @@ const SidebarCom = (props) => {
       }
       console.log(obj)
       try {
-        let res=await axios.post('http://localhost:8090/post/create',obj,{
+        let res=await axios.post('https://social-media-66lv.onrender.com/post/create',obj,{
           headers:{
             'Authorization':useSlice.token
           }

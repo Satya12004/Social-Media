@@ -23,7 +23,7 @@ let dispatch =useDispatch()
    
    let getFriends = async () => {
     try {
-      let res = await axios.get(`http://localhost:8090/user/getfriend?id=${location.state}`,
+      let res = await axios.get(`https://social-media-66lv.onrender.com/user/getfriend?id=${location.state}`,
         // {
         //   headers: {
         //     Authorization: userSlice.token,
@@ -45,7 +45,7 @@ let dispatch =useDispatch()
 
  let getFriendsPost = async () => {
     try {
-      let res = await axios.get(`http://localhost:8090/post/friendpost/${location.state}`,
+      let res = await axios.get(`https://social-media-66lv.onrender.com/post/friendpost/${location.state}`,
         {
           headers: {
             'Authorization': userSlice.token,
@@ -63,7 +63,7 @@ let dispatch =useDispatch()
   },[location.state])
 
   const handleFollow = async()=>{
-    let res = await axios.put(`http://localhost:8090/user/followuser/${location.state}`,{},{
+    let res = await axios.put(`https://social-media-66lv.onrender.com/user/followuser/${location.state}`,{},{
       headers:{
         'Authorization': userSlice.token
       }

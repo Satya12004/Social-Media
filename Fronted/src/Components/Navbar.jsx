@@ -73,7 +73,7 @@ let dispatch=useDispatch()
 const [SearchUser, setSearchUser] = useState([]);
 
 const handleSearchuser=async(e)=>{
-  let res=await axios.get(`http://localhost:8090/user/SerchUser?name=${e.target.value}`)
+  let res=await axios.get(`https://social-media-66lv.onrender.com/user/SerchUser?name=${e.target.value}`)
   let data =res.data
   console.log(data)
   setSearchUser(data.users)

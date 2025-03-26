@@ -13,7 +13,7 @@ export const fetchUserBydata = createAsyncThunk(
   'fetchUserBydata',
   async (token) => {
     console.log(token)
-    const response = await axios.get('http://localhost:8090/user/loggedInUser',{
+    const response = await axios.get('https://social-media-66lv.onrender.com/user/loggedInUser',{
       headers:{
         'Authorization':token
       }

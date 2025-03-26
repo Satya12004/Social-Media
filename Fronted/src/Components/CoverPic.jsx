@@ -25,7 +25,7 @@ const CoverPic = () => {
           console.log(res)
           console.log(res.data.secure_url)
 
-          let ref=await axios.put('http://localhost:8090/user/update',{coverPic:res.data.secure_url},{
+          let ref=await axios.put('https://social-media-66lv.onrender.com/user/update',{coverPic:res.data.secure_url},{
    
             headers:{
               'authorization':selector.token

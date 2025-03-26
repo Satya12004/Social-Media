@@ -26,6 +26,7 @@ const login=async(req,res)=>{
     const{email,password}=req.body
    try {
     let userdata=await userCollection.findOne({email})
+    // console.log(userdata)
     if(userdata){
      let comparePassword=bcrypt.compareSync(password,userdata.password)
      if(comparePassword){
@@ -33,7 +34,7 @@ const login=async(req,res)=>{
          // let token = jwt.sign({}, secretKey)
          let token = jwt.sign({_id:userdata._id}, JWT_SECRET)
          res.cookie('token',token)
-         res.status(200).json({ msg: "user log in successfully", token })
+         res.status(200).json({ msg: "user log in successfully", token})
      
      }
      else{
@@ -132,7 +133,7 @@ const resetpassword=async(req,res)=>{
 }
 
 const getLoggedInuser=async(req,res)=>{
-    // console.log(req.user)
+    console.log(req.user)
     res.status(200).json(req.user)
 }
 

@@ -13,7 +13,7 @@ const Profile = () => {
    console.log(userSlice)
   
   let getAllyourPost=async()=>{
-    let res=await axios.get('http://localhost:8090/post/yourpost',{
+    let res=await axios.get('https://social-media-66lv.onrender.com/post/yourpost',{
       headers:{
         'Authorization':userSlice.token
       }
@@ -33,22 +33,22 @@ const Profile = () => {
     <div>
         
     
-      <div  className="topPart w-[90%] m-auto h-[45vh] relative bg-green-500">
+      <div  className="topPart w-[90%] m-auto h-[45vh] relative bg-green-500 text-white">
         <CoverPic/>
-      </div>
+         </div>
       <div className="mid mb-5 w-[50%] m-auto text-center mt-15 ">
         <div className='flex justify-center gap-7  mt-55 text-white text-center'>
         <span>
             <b>Posts</b>
-            <p>50</p>
+            <p>{post.length}</p>
         </span>
         <span>
             <b>Followers</b>
-            <p>100</p>
+            <p>{userSlice?.user?.followers?.length}</p>
         </span>
         <span>
             <b>Followings</b>
-            <p>500</p>
+            <p>{userSlice?.user?.followings?.length}</p>
         </span>
         </div>
     

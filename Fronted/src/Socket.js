@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-let url = 'http://localhost:8090';
+let url = 'https://social-media-66lv.onrender.com';
 const socket = io(url, { transports: ['websocket'],
    
     reconnection: true,           // Enable reconnection

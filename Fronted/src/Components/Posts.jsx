@@ -60,7 +60,8 @@ export default function Posts(props) {
       }
     
     let userSlice = useSelector((state)=>state.user)
-    let userId = userSlice.user?._id
+    console.log(userSlice)
+    let userId = userSlice?.user?._id
     console.log(userId)
   
     let CommentRef=useRef()
@@ -68,7 +69,7 @@ export default function Posts(props) {
         console.log(post)
         let text=CommentRef.current.value
         console.log(text)
-        let res = await axios.post(`http://localhost:8090/post/comment/${post._id}`,{text},{
+        let res = await axios.post(`https://social-media-66lv.onrender.com/post/comment/${post._id}`,{text},{
             headers:{
                 'Authorization':userSlice.token
             }
@@ -82,7 +83,7 @@ export default function Posts(props) {
     const handleCommentDelete = async(obj)=>{
         console.log(obj)
         console.log(props.ele)
-        let res = await axios.delete(`http://localhost:8090/post/deleteComment/${props.ele._id}/${obj._id}`)
+        let res = await axios.delete(`https://social-media-66lv.onrender.com/post/deleteComment/${props.ele._id}/${obj._id}`)
         let data = res.data;
         console.log(data)
         toast.success(data.msg,{position:'top-center'})
@@ -91,7 +92,7 @@ export default function Posts(props) {
 
 const handleLike = async(obj)=>{
     console.log(obj)
-    let res = await axios.get(`http://localhost:8090/post/likeduser/${obj._id}`,{
+    let res = await axios.get(`https://social-media-66lv.onrender.com/post/likeduser/${obj._id}`,{
         headers:{
             'Authorization':userSlice.token
         }

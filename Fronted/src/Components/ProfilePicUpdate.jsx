@@ -20,7 +20,7 @@ const ProfilePicUpdate = () => {
     console.log(res)
     console.log(res.data.secure_url)
    
-    let ref=await axios.put('http://localhost:8090/user/update',{profilePic:res.data.secure_url},{
+    let ref=await axios.put('https://social-media-66lv.onrender.com/user/update',{profilePic:res.data.secure_url},{
    
       headers:{
         'authorization':selector.token
@@ -37,14 +37,14 @@ const ProfilePicUpdate = () => {
   return (
   
   <div className='absolute bottom-[-75px] left-[5%] w-[175px] h-[175px] rounded-full border-amber-800 border-2'>
-        <img src={selector.user?.profilePic} className='w-full h-full rounded-full object-cover' alt="" />
-            <h3 className='text-center mt-3 text-xl text-white'>{selector.user?.name}</h3>
+        <img src={selector?.user?.profilePic} className='w-full h-full rounded-full object-cover' alt="" />
+            <h3 className='text-center mt-3 text-xl text-white'>{selector?.user?.name}</h3>
             <div className='updateProfile absolute bottom-4 right-0'>
                 <label htmlFor="profile"><CiCamera size={35} color='yellow'/></label>
                 <input onChange={handleProfilePic} type="file" hidden id='profile' />
             </div>
     </div>
-  )
+  ) 
 }
 
 export default ProfilePicUpdate

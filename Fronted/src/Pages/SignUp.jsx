@@ -17,7 +17,7 @@ const SignUp = () => {
     password:passwordRef.current.value
    }
    console.log(obj)
-   let res=await axios.post('http://localhost:8090/user/create',obj)
+   let res=await axios.post('https://social-media-66lv.onrender.com/user/create',obj)
    console.log(res)
    if(res.status==200||res.status==201){
     alert('user create successfully')
