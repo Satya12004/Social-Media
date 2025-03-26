@@ -1,7 +1,7 @@
 import React from 'react'
 import { CiCamera } from "react-icons/ci";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserBydata } from '../Store/userSlice';
+import { fetchUserBydata } from '../Store/UserSlice';
 import axios from 'axios';
 
 const ProfilePicUpdate = () => {

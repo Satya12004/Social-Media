@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProfilePicUpdate from './ProfilePicUpdate';
 import { useSelector,useDispatch } from 'react-redux';
-import { fetchUserBydata } from '../Store/userSlice';
+import { fetchUserBydata } from '../Store/UserSlice';
 import { FaCamera } from "react-icons/fa"
 import axios from 'axios';
 import Loading from './Loading';

@@ -6,7 +6,7 @@ import Posts from '../Components/Posts';
  import { useLocation } from 'react-router-dom';
  import queryString from 'querystring';
 import { toast } from 'react-toastify';
-import { updateUser } from '../Store/userSlice';
+import { updateUser } from '../Store/UserSlice';
 import { Link } from 'react-router-dom';
  
  const FriendProfile = () => {
