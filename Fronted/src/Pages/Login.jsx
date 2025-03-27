@@ -41,7 +41,7 @@ const Login = () => {
       <path d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z" data-original="#000000" />
     </svg>
     <div className="my-8 text-center">
-      <h4 className="text-3xl text-gray-800 font-extrabold">Sign Up</h4>
+      <h4 className="text-3xl text-gray-800 font-extrabold">Sign In</h4>
       <p className="text-sm text-gray-500 mt-4">Create an account with us</p>
     </div>
     <form className="space-y-4">
