@@ -15,7 +15,8 @@ const UserRouter=require('./Routes/UserRoutes');
 const PostRouter = require('./Routes/PostRoutes');
 const ChatRouter =require('./Routes/ChatRoutes')
 app.use(cors({
-  origin: 'http://localhost:3000',  // Frontend URL
+  origin: ['http://localhost:3000',"https://social-media-theta-ochre.vercel.app"] ,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true                 // Allow credentials (cookies, headers)
 }))
 // const io = require('socket.io')(server);
