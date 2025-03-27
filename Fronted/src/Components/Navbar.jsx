@@ -77,6 +77,10 @@ const handleSearchuser=async(e)=>{
   let data =res.data
   console.log(data)
   setSearchUser(data.users)
+  if (data.users.length > 0) {
+    e.target.value = ''; 
+  }
+  
 }
 
 
