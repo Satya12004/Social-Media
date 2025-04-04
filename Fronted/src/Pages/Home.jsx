@@ -31,10 +31,10 @@ const Home = () => {
   
   return (
     <div className='flex h-[80vh]'>
-    <div className='fixed top-[65px] left-0 w-[240px] h-[calc(100vh-65px)] bg-white'>
+    <div className='fixed lg:top-[65px]  top-[55px] left-0 w-[240px] h-[calc(100vh-65px)]'>
       <SidebarCom getAllyourPost={getAllPost}/>
    </div>
-    <div className='ml-[240px] flex-1 overflow-y-auto  bg-amber-300' style={{height:'calc(115vh - 65px)'}}>
+    <div className='lg:ml-[240px] ml-[10px] flex-1 overflow-y-auto  bg-white' style={{height:'calc(115vh - 65px)'}}>
    
     <div className='max-w-1/2 m-auto  flex flex-col gap-2 mt-20'>
 

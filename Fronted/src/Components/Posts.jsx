@@ -116,7 +116,7 @@ const handleLike = async(obj)=>{
     <div>
           <Card
             variant="outlined"
-            sx={{ minWidth: 300, '--Card-radius': (theme) => theme.vars.radius.xs }}
+            sx={{ minWidth: 250, '--Card-radius': (theme) => theme.vars.radius.xs }}
         >
             <CardContent onClick={handleClick} orientation="horizontal" sx={{ alignItems: 'center', gap: 1 }}>
                 <Box

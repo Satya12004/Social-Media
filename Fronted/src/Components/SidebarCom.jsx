@@ -85,13 +85,13 @@ const SidebarCom = (props) => {
       }
     }
   return (
-    <div>
-      <ul className='flex flex-col text-center'>
-        <li className='p-3 border-b text-black'><Link to={'/'}>Home</Link></li>
+    <div className=''>
+      <ul className='flex flex-col text-center lg:w-[230px] w-[85px] bg-gray-500'>
+        <li className='lg:p-3 p-1 border-b text-black'><Link to={'/'}>Home</Link></li>
         <li onClick={showModal} className='p-3 border-b text-black'>Create Post</li>
-        <li className='p-3 border-b text-black'>Message</li>
-        <li className='p-3 border-b text-black'>Follower</li>
-        <li className='p-3 border-b text-black'>Following</li>
+        <li className='lg:p-3 p-1 border-b text-black'>Message</li>
+        <li className='lg:p-3 p-1 border-b text-black'>Follower</li>
+        <li className='lg:p-3 p-1 border-b text-black'>Following</li>
        
       </ul>
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
