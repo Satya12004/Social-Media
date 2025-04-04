@@ -36,8 +36,8 @@ const Profile = () => {
       <div  className="topPart w-[90%] m-auto h-[45vh] relative bg-green-500 text-white">
         <CoverPic/>
          </div>
-      <div className="mid mb-5 w-[50%] m-auto text-center mt-15 ">
-        <div className='flex justify-center gap-7  mt-55 text-white text-center'>
+      <div className="mid mb-5 w-[50%] m-auto text-center mt-15">
+        <div className='flex justify-center gap-7 mt-80 lg:mt-55 text-white text-center'>
         <span>
             <b>Posts</b>
             <p>{post.length}</p>
@@ -55,7 +55,7 @@ const Profile = () => {
       </div>
 
       <div className='bottomBox w-max flex flex-col gap-2 m-auto mt-10 justify-center align-middle'>
-      <div className='max-w-1/4 m-auto  flex flex-col gap-2'>
+      <div className='m-auto  flex flex-col gap-2'>
                    {post.map((ele,i)=>{
                      return <Posts ele={ele}/>
                    })}

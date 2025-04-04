@@ -92,7 +92,7 @@ let dispatch =useDispatch()
      ))
      }
      
-       <div className="mid mb-5 w-[90%] m-auto text-center relative mt-5 text-white">
+       <div className="mid mb-5 w-[90%] m-auto text-center relative lg:mt-5 mt-30 text-white">
          <div className='flex justify-center gap-7 '>
          <span>
              <b>Posts</b>
